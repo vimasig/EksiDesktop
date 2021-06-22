@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import org.fxmisc.flowless.VirtualizedScrollPane?>
+<?import org.fxmisc.richtext.StyleClassedTextArea?>
+
+<VBox fx:id="base" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.vimasig.eksidesktop.ui.MenuController">
+   <children>
+      <MenuBar fx:id="menuBar" VBox.vgrow="NEVER">
+         <menus>
+            <Menu mnemonicParsing="false" text="Web">
+              <items>
+                  <MenuItem fx:id="refreshButton" mnemonicParsing="false" text="Yenile" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Görünüm">
+              <items>
+                  <CheckMenuItem mnemonicParsing="false" text="Karanlık mod" />
+                  <CheckMenuItem mnemonicParsing="false" text="Büyük harf düzeltmesi" />
+              </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <SplitPane dividerPositions="0.3" focusTraversable="false" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+         <items>
+            <ScrollPane fitToWidth="true" SplitPane.resizableWithParent="false">
+               <content>
+                  <VBox fx:id="topicList" />
+               </content>
+            </ScrollPane>
+            <VirtualizedScrollPane>
+               <content>
+                  <StyleClassedTextArea fx:id="mainPage" editable="false" wrapText="true" />
+               </content>
+            </VirtualizedScrollPane>
+         </items>
+      </SplitPane>
+      <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+         <children>
+            <Label fx:id="status" maxHeight="1.7976931348623157E308" maxWidth="-1.0" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="11.0" fx:id="x3" />
+               </font>
+               <textFill>
+                  <Color red="0.625" green="0.625" blue="0.625" fx:id="x4" />
+               </textFill>
+            </Label>
+            <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+            <ChoiceBox fx:id="pageChoice" prefWidth="60.0" />
+            <Button fx:id="backwardButton" disable="true" mnemonicParsing="false" text="&lt;" />
+            <Button fx:id="forwardButton" disable="true" mnemonicParsing="false" text="&gt;" />
+         </children>
+         <padding>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,6 @@
+.title {
+    -fx-font-weight: bold;
+}
+.selected {
+    -fx-background-color: #529952
+}

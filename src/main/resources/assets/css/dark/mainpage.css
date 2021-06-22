@@ -1,0 +1,27 @@
+#mainPage {
+    -fx-background-color: rgb(48,48,48);
+    -fx-text-alignment: left;
+}
+.content, .content-topic{
+    -fx-font-size: 13px;
+    -fx-fill: #fff;
+    -fx-text-alignment: left;
+}
+.content-topic {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+.entry-info {
+    -fx-text-alignment: right;
+    -fx-font-size: 12px;
+}
+.link:hover {
+    -fx-cursor: hand;
+    -fx-underline: true;
+}
+.faded {
+    -fx-fill: #bbb;
+}
+.author {
+    -fx-fill: #afa;
+}
