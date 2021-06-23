@@ -22,7 +22,7 @@ private data class Hyperlink(val url: URL, val startIndex: Int, val endIndex: In
 
 class MainPageHandler(menuController: MenuController) : MenuControllerHandler(menuController) {
 
-    private val cacheManager = EksiCacheManager(this.menuController.parser, status = menuController.status)
+    val cacheManager = EksiCacheManager(this.menuController.parser, status = menuController.status)
     private val mainPage = this.menuController.mainPage
     private val hyperlinks = arrayListOf<Hyperlink>()
     private lateinit var latestTopic: EksiTopic

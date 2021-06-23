@@ -12,12 +12,9 @@ class EksiCacheManager(private val parser: EksiParser, private val cache: CopyOn
     private var processed: Int = 0
     private var lastSize: Int = 0
 
-    fun update() {
-        if(runningThreads != 0 && getProgress(Double) != 100.0) {
-            System.err.println("Cannot update the cache. An update is already in progress.")
-            return
-        }
+    fun isRunning() = runningThreads != 0 && getProgress(Double) != 100.0
 
+    fun update() {
         // Reset
         this.cache.clear()
         this.processed = 0

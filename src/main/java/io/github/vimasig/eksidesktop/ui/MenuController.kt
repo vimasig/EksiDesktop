@@ -58,6 +58,11 @@ class MenuController {
 
         // Refresh button
         this.refreshButton.setOnAction {
+            if(this.getMenuControllerHandler(MainPageHandler::class).cacheManager.isRunning()) {
+                System.err.println("Cannot load showcased topics. An update is already in progress.")
+                return@setOnAction
+            }
+
             this.updateParser()
             this.getMenuControllerHandler(MainPageHandler::class).loadShowcasedTopics()
             this.getMenuControllerHandler(TopicListHandler::class).update()
