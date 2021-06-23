@@ -11,4 +11,4 @@ cd EksiDesktop
 mvn compile javafx:run
 ```
 
-![alt text](https://i.imgur.com/YusNg1E.png)
+![](https://i.imgur.com/YusNg1E.png)
