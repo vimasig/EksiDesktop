@@ -56,10 +56,6 @@ class EksiParser(var document: Document) {
                             .getElementsByTag("a").first()
                             .getElementsByTag("small").getFirstText()
                             .toInt()
-//                    override fun getPageCount() = this.getCurrentPageDocument().document
-//                        .getElementsByClass("pager")
-//                        .attr("data-pagecount")
-//                        .toInt()
                 }
             }
             .toList()
