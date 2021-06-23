@@ -39,7 +39,7 @@ class TopicListHandler(menuController: MenuController) : MenuControllerHandler(m
                 // Navigate
                 val mainPageHandler = this.menuController.getMenuControllerHandler(MainPageHandler::class)
                 if (!this.menuController.mainPage.text.startsWith(topic.getTitle() + System.lineSeparator().repeat(3))) // Check if the page is already loaded
-                    mainPageHandler.navigate(topic)
+                    mainPageHandler.navigate(topic.apply{ this.page = 1 })
             }
 
             // Generate & add topic box
