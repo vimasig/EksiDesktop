@@ -1,4 +1,4 @@
-open module EksiDesktop {
+module EksiDesktop {
     requires javafx.controls;
     requires javafx.fxml;
     requires kotlin.stdlib.jdk8;
@@ -6,5 +6,5 @@ open module EksiDesktop {
     requires org.fxmisc.richtext;
     requires java.desktop;
 
-    exports io.github.vimasig.eksidesktop.ui;
+    opens io.github.vimasig.eksidesktop.ui;
 }
