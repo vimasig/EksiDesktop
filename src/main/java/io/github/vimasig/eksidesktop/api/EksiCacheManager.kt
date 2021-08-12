@@ -41,6 +41,7 @@ class EksiCacheManager(private val parser: EksiParser, private val cache: CopyOn
                 runningThreads--
             }.let {
                 it.name = "Cache thread #$threadId"
+                it.isDaemon = true
                 it.start()
             }
         }
