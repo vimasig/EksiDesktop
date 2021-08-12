@@ -45,7 +45,7 @@ class MainPageHandler(menuController: MenuController) : MenuControllerHandler(me
         this.loadShowcasedTopics()
 
         // Handle hyperlink clicks
-        this.mainPage.setOnMouseClicked {
+        this.mainPage.setOnMousePressed {
             val index = this.mainPage.caretPosition
             val styles = this.mainPage.getStyleAtPosition(index)
             if(styles.contains("link")) {
