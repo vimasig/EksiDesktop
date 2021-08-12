@@ -52,7 +52,7 @@ class MainPageHandler(menuController: MenuController) : MenuControllerHandler(me
                 val hyperlink = this.findHyperlink(index)
                 if (hyperlink != null) {
                     if(!DesktopUtils.browseURL(hyperlink.url))
-                        Alert(Alert.AlertType.ERROR, EksiMessage.CANNOT_OPEN_LINK + hyperlink.url, ButtonType.OK).let { it.headerText = ""; it.show() }
+                        Alert(Alert.AlertType.ERROR, EksiMessage.CANNOT_OPEN_LINK() + hyperlink.url, ButtonType.OK).let { it.headerText = ""; it.show() }
                 } else error("Cannot find Hyperlink object of style \"link\" at index $index")
             }
         }

@@ -10,8 +10,8 @@ object DesktopUtils {
 
     fun browseURL(url: URL): Boolean {
         // Confirmation dialog
-        Alert(Alert.AlertType.INFORMATION, EksiMessage.OPEN_LINK_CONFIRMATION + StringUtils.getLineSeparator() + url, ButtonType.YES, ButtonType.CANCEL).let { alert ->
-            alert.title = EksiMessage.TITLE
+        Alert(Alert.AlertType.INFORMATION, EksiMessage.OPEN_LINK_CONFIRMATION() + StringUtils.getLineSeparator() + url, ButtonType.YES, ButtonType.CANCEL).let { alert ->
+            alert.title = EksiMessage.TITLE()
             alert.headerText = ""
             alert.showAndWait().let {
                 if (!it.isPresent || !it.get().buttonData.isDefaultButton)
